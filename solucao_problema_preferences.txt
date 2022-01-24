@@ -1,0 +1,6 @@
+
+Go into your Start Menu and type regedit into the search field.
+Navigate to the following path
+   HKEY_LOCAL_MACHINE\Software\JavaSoft
+Right click on the JavaSoft folder and click on New -> Key
+Name the new Key Prefs and everything should work.

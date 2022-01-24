@@ -1,0 +1,4 @@
+Manifest-Version: 1.0
+Main-Class: util.Main
+Class-Path: libs/commons-codec-1.10.jar
+  libs/commons-lang3-3.3.2.jar

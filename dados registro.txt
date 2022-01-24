@@ -1,0 +1,122 @@
+
+
+softCOD  4 digitos (codigo do software em questao)
+
+clientCOD 8 digitos (codigo do cliente em questao, na verdade, referece ao codigo da solicitacao da tabela de solicitacoes)
+
+
+criptografia com chave de 16 bytes (16 caracteres)
+
+
+o sistema no primeiro uso (ou quando se apaga os registros) gera uma id, esta id possui 9 caracteres. 
+
+dois desses caracteres formam o indice de uma das chaves abaixo 0 a 19, ou seja, apartir do id, sabemos a chave privada:
+
+
+527f57a40354545h
+905z35p31645hi92
+45789a12098s7g32
+90523f89210vjl98
+36993c70845j41xc
+5c84p6a04s42ncl2
+p70632f62120vc87
+q078v941j4781sb0
+786g6a91p1vk03fc
+4579823f21qrfb11
+k8562812f9m3bizc
+5m6921a56106bdtb
+89c303a04xxsf430
+0fk2352a3g461qaf
+498494268076zzb1
+24912g19a0q098i4
+7f99a0j3414gbczm
+k56723564m719798
+zmar2g503sklpdf3
+203a4f23p1134fvz
+
+
+--------------> formacao do id:
+
+gera um aleatorio de 0 a 19. será o indice da chave.( completa com zero a esquerda)
+
+gera o 1 bloco de aleatorio de 0 a 999. ( completa com zero a esquerda)
+gera o 2 bloco de aleatorio de 0 a 99. ( completa com zero a esquerda)
+gera o 3 bloco de aleatorio de 0 a 99. ( completa com zero a esquerda)
+
+
+concatena assim:
+
+1_bloco + 2_caracter_do_indice + 2_bloco + 1_caracter_do_indice + 3_bloco
+  999		9		    99		    9		     99
+
+
+
+
+
+
+
+
+------------------------------> formato de chave serial:
+
+
+
+-------------- id de software:
+
+largura: 9. (999999999)
+preenchido com zero a esquerda.
+somente número.
+
+
+-------------- codigo de cliente:
+
+largura: 8. (99999999)
+preenchido com zero a esquerda.
+somente número.
+
+
+-------------- codigo do software:
+
+largura: 4. (9999)
+preenchido com zero a esquerda.
+somente número.
+
+
+-------------- data início:
+
+largura: 8. (99999999) dia 2 + mes 2+ ano 4
+somente número.
+
+
+-------------- cont dias de licença:
+
+largura: 3. (999) 
+preenchido com zero a esquerda.
+somente número.
+
+
+
+
+------------- formato da chave:
+
+
+client_cod + id_soft + codigo_soft + dia_inicial + mes_inicial + ano_inicial + cont_dias
+   
+   (8)      + (9)         +(4)            +(2 + 2 + 4)                           +(3)  = 32 caracteres.
+
+
+intervalos:
+
+[0 , 8[
+[8 , 17[
+[17 , 21[
+[21 , 23[
+[23 , 25[
+[25 , 29[
+[29 , 32[
+
+
+
+
+
+
+

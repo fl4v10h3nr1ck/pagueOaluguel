@@ -1,0 +1,7 @@
+
+*********** adicionado novo método para validar um current record sem bloquear a aplicação (ou mostrar janela de registro) caso a licença atual seja inválida (opção importante para aplicações que, ao terminar o período da licença, somente alguns recursos são bloqueados não a aplicação inteira).
+
+
+
+
+

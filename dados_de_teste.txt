@@ -1,0 +1,10 @@
+String id_soft= "538124191";	
+	String cod_client= "42193807";
+	String cod_soft= "7829";	
+	String datainicio= "14022015";	
+	String cont= "030";	
+	String chave= "5m6921a56106bdtb";
+
+
+
+A7UgVFCzVI5mPc/UcUC6nq1zp4li+Yil6tY4lHNkTX4=	
